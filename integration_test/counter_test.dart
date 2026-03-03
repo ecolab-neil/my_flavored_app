@@ -7,12 +7,12 @@ import 'package:patrol/patrol.dart';
 
 void main() {
   patrolTest(
-    'counter state initial is 0',
+    'counter increments',
     ($) async {
       // Replace later with your app's main widget
       await $.pumpWidgetAndSettle(const App());
-
-      expect($('0'), findsOneWidget);
+      await $.tap(find.byIcon(Icons.add));
+      expect($('1'), findsOneWidget);
     },
   );
 }
