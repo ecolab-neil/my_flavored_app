@@ -20,8 +20,17 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.4
+  patrol: ^4.1.1
   very_good_analysis: ^9.0.0
 
 flutter:
   generate: true
   uses-material-design: true
+
+
+patrol:
+  app_name: My Flavored App
+  flavor: development # careful
+  test_directory: integration_test  # Use custom directory
+  android:
+    package_name: com.example.verygoodcore.my_flavored_app
